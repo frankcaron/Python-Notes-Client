@@ -1,0 +1,469 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		22739E04179610E70093CE62 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 22739E03179610E70093CE62 /* UIKit.framework */; };
+		22739E06179610E70093CE62 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 22739E05179610E70093CE62 /* Foundation.framework */; };
+		22739E08179610E70093CE62 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 22739E07179610E70093CE62 /* CoreGraphics.framework */; };
+		22739E0E179610E70093CE62 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 22739E0C179610E70093CE62 /* InfoPlist.strings */; };
+		22739E10179610E70093CE62 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 22739E0F179610E70093CE62 /* main.m */; };
+		22739E14179610E70093CE62 /* PiOSCAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 22739E13179610E70093CE62 /* PiOSCAppDelegate.m */; };
+		22739E16179610E70093CE62 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 22739E15179610E70093CE62 /* Default.png */; };
+		22739E18179610E70093CE62 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 22739E17179610E70093CE62 /* Default@2x.png */; };
+		22739E1A179610E70093CE62 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 22739E19179610E70093CE62 /* Default-568h@2x.png */; };
+		22739E1D179610E70093CE62 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 22739E1B179610E70093CE62 /* MainStoryboard.storyboard */; };
+		22739E20179610E70093CE62 /* PiOSCViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 22739E1F179610E70093CE62 /* PiOSCViewController.m */; };
+		22739E28179610E70093CE62 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 22739E27179610E70093CE62 /* SenTestingKit.framework */; };
+		22739E29179610E70093CE62 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 22739E03179610E70093CE62 /* UIKit.framework */; };
+		22739E2A179610E70093CE62 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 22739E05179610E70093CE62 /* Foundation.framework */; };
+		22739E32179610E70093CE62 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 22739E30179610E70093CE62 /* InfoPlist.strings */; };
+		22739E35179610E70093CE62 /* Python_Notes_iOSClientTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 22739E34179610E70093CE62 /* Python_Notes_iOSClientTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		22739E2B179610E70093CE62 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 22739DF8179610E70093CE62 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 22739DFF179610E70093CE62;
+			remoteInfo = "Python-Notes-iOSClient";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		22739E00179610E70093CE62 /* Python-Notes-iOSClient.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Python-Notes-iOSClient.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		22739E03179610E70093CE62 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		22739E05179610E70093CE62 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		22739E07179610E70093CE62 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		22739E0B179610E70093CE62 /* Python-Notes-iOSClient-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Python-Notes-iOSClient-Info.plist"; sourceTree = "<group>"; };
+		22739E0D179610E70093CE62 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		22739E0F179610E70093CE62 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		22739E11179610E70093CE62 /* Python-Notes-iOSClient-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Python-Notes-iOSClient-Prefix.pch"; sourceTree = "<group>"; };
+		22739E12179610E70093CE62 /* PiOSCAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PiOSCAppDelegate.h; sourceTree = "<group>"; };
+		22739E13179610E70093CE62 /* PiOSCAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PiOSCAppDelegate.m; sourceTree = "<group>"; };
+		22739E15179610E70093CE62 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		22739E17179610E70093CE62 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		22739E19179610E70093CE62 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		22739E1C179610E70093CE62 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
+		22739E1E179610E70093CE62 /* PiOSCViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PiOSCViewController.h; sourceTree = "<group>"; };
+		22739E1F179610E70093CE62 /* PiOSCViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PiOSCViewController.m; sourceTree = "<group>"; };
+		22739E26179610E70093CE62 /* Python-Notes-iOSClientTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Python-Notes-iOSClientTests.octest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		22739E27179610E70093CE62 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
+		22739E2F179610E70093CE62 /* Python-Notes-iOSClientTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Python-Notes-iOSClientTests-Info.plist"; sourceTree = "<group>"; };
+		22739E31179610E70093CE62 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		22739E33179610E70093CE62 /* Python_Notes_iOSClientTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Python_Notes_iOSClientTests.h; sourceTree = "<group>"; };
+		22739E34179610E70093CE62 /* Python_Notes_iOSClientTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Python_Notes_iOSClientTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		22739DFD179610E70093CE62 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				22739E04179610E70093CE62 /* UIKit.framework in Frameworks */,
+				22739E06179610E70093CE62 /* Foundation.framework in Frameworks */,
+				22739E08179610E70093CE62 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		22739E22179610E70093CE62 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				22739E28179610E70093CE62 /* SenTestingKit.framework in Frameworks */,
+				22739E29179610E70093CE62 /* UIKit.framework in Frameworks */,
+				22739E2A179610E70093CE62 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		22739DF7179610E70093CE62 = {
+			isa = PBXGroup;
+			children = (
+				22739E09179610E70093CE62 /* Python-Notes-iOSClient */,
+				22739E2D179610E70093CE62 /* Python-Notes-iOSClientTests */,
+				22739E02179610E70093CE62 /* Frameworks */,
+				22739E01179610E70093CE62 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		22739E01179610E70093CE62 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				22739E00179610E70093CE62 /* Python-Notes-iOSClient.app */,
+				22739E26179610E70093CE62 /* Python-Notes-iOSClientTests.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		22739E02179610E70093CE62 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				22739E03179610E70093CE62 /* UIKit.framework */,
+				22739E05179610E70093CE62 /* Foundation.framework */,
+				22739E07179610E70093CE62 /* CoreGraphics.framework */,
+				22739E27179610E70093CE62 /* SenTestingKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		22739E09179610E70093CE62 /* Python-Notes-iOSClient */ = {
+			isa = PBXGroup;
+			children = (
+				22739E12179610E70093CE62 /* PiOSCAppDelegate.h */,
+				22739E13179610E70093CE62 /* PiOSCAppDelegate.m */,
+				22739E1B179610E70093CE62 /* MainStoryboard.storyboard */,
+				22739E1E179610E70093CE62 /* PiOSCViewController.h */,
+				22739E1F179610E70093CE62 /* PiOSCViewController.m */,
+				22739E0A179610E70093CE62 /* Supporting Files */,
+			);
+			path = "Python-Notes-iOSClient";
+			sourceTree = "<group>";
+		};
+		22739E0A179610E70093CE62 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				22739E0B179610E70093CE62 /* Python-Notes-iOSClient-Info.plist */,
+				22739E0C179610E70093CE62 /* InfoPlist.strings */,
+				22739E0F179610E70093CE62 /* main.m */,
+				22739E11179610E70093CE62 /* Python-Notes-iOSClient-Prefix.pch */,
+				22739E15179610E70093CE62 /* Default.png */,
+				22739E17179610E70093CE62 /* Default@2x.png */,
+				22739E19179610E70093CE62 /* Default-568h@2x.png */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		22739E2D179610E70093CE62 /* Python-Notes-iOSClientTests */ = {
+			isa = PBXGroup;
+			children = (
+				22739E33179610E70093CE62 /* Python_Notes_iOSClientTests.h */,
+				22739E34179610E70093CE62 /* Python_Notes_iOSClientTests.m */,
+				22739E2E179610E70093CE62 /* Supporting Files */,
+			);
+			path = "Python-Notes-iOSClientTests";
+			sourceTree = "<group>";
+		};
+		22739E2E179610E70093CE62 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				22739E2F179610E70093CE62 /* Python-Notes-iOSClientTests-Info.plist */,
+				22739E30179610E70093CE62 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		22739DFF179610E70093CE62 /* Python-Notes-iOSClient */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 22739E38179610E70093CE62 /* Build configuration list for PBXNativeTarget "Python-Notes-iOSClient" */;
+			buildPhases = (
+				22739DFC179610E70093CE62 /* Sources */,
+				22739DFD179610E70093CE62 /* Frameworks */,
+				22739DFE179610E70093CE62 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Python-Notes-iOSClient";
+			productName = "Python-Notes-iOSClient";
+			productReference = 22739E00179610E70093CE62 /* Python-Notes-iOSClient.app */;
+			productType = "com.apple.product-type.application";
+		};
+		22739E25179610E70093CE62 /* Python-Notes-iOSClientTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 22739E3B179610E70093CE62 /* Build configuration list for PBXNativeTarget "Python-Notes-iOSClientTests" */;
+			buildPhases = (
+				22739E21179610E70093CE62 /* Sources */,
+				22739E22179610E70093CE62 /* Frameworks */,
+				22739E23179610E70093CE62 /* Resources */,
+				22739E24179610E70093CE62 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				22739E2C179610E70093CE62 /* PBXTargetDependency */,
+			);
+			name = "Python-Notes-iOSClientTests";
+			productName = "Python-Notes-iOSClientTests";
+			productReference = 22739E26179610E70093CE62 /* Python-Notes-iOSClientTests.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		22739DF8179610E70093CE62 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = PiOSC;
+				LastUpgradeCheck = 0460;
+				ORGANIZATIONNAME = "Frank Caron";
+			};
+			buildConfigurationList = 22739DFB179610E70093CE62 /* Build configuration list for PBXProject "Python-Notes-iOSClient" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 22739DF7179610E70093CE62;
+			productRefGroup = 22739E01179610E70093CE62 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				22739DFF179610E70093CE62 /* Python-Notes-iOSClient */,
+				22739E25179610E70093CE62 /* Python-Notes-iOSClientTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		22739DFE179610E70093CE62 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				22739E0E179610E70093CE62 /* InfoPlist.strings in Resources */,
+				22739E16179610E70093CE62 /* Default.png in Resources */,
+				22739E18179610E70093CE62 /* Default@2x.png in Resources */,
+				22739E1A179610E70093CE62 /* Default-568h@2x.png in Resources */,
+				22739E1D179610E70093CE62 /* MainStoryboard.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		22739E23179610E70093CE62 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				22739E32179610E70093CE62 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		22739E24179610E70093CE62 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		22739DFC179610E70093CE62 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				22739E10179610E70093CE62 /* main.m in Sources */,
+				22739E14179610E70093CE62 /* PiOSCAppDelegate.m in Sources */,
+				22739E20179610E70093CE62 /* PiOSCViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		22739E21179610E70093CE62 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				22739E35179610E70093CE62 /* Python_Notes_iOSClientTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		22739E2C179610E70093CE62 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 22739DFF179610E70093CE62 /* Python-Notes-iOSClient */;
+			targetProxy = 22739E2B179610E70093CE62 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		22739E0C179610E70093CE62 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				22739E0D179610E70093CE62 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		22739E1B179610E70093CE62 /* MainStoryboard.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				22739E1C179610E70093CE62 /* en */,
+			);
+			name = MainStoryboard.storyboard;
+			sourceTree = "<group>";
+		};
+		22739E30179610E70093CE62 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				22739E31179610E70093CE62 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		22739E36179610E70093CE62 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		22739E37179610E70093CE62 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		22739E39179610E70093CE62 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Python-Notes-iOSClient/Python-Notes-iOSClient-Prefix.pch";
+				INFOPLIST_FILE = "Python-Notes-iOSClient/Python-Notes-iOSClient-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		22739E3A179610E70093CE62 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Python-Notes-iOSClient/Python-Notes-iOSClient-Prefix.pch";
+				INFOPLIST_FILE = "Python-Notes-iOSClient/Python-Notes-iOSClient-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		22739E3C179610E70093CE62 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Python-Notes-iOSClient.app/Python-Notes-iOSClient";
+				FRAMEWORK_SEARCH_PATHS = (
+					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
+					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Python-Notes-iOSClient/Python-Notes-iOSClient-Prefix.pch";
+				INFOPLIST_FILE = "Python-Notes-iOSClientTests/Python-Notes-iOSClientTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		22739E3D179610E70093CE62 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Python-Notes-iOSClient.app/Python-Notes-iOSClient";
+				FRAMEWORK_SEARCH_PATHS = (
+					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
+					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Python-Notes-iOSClient/Python-Notes-iOSClient-Prefix.pch";
+				INFOPLIST_FILE = "Python-Notes-iOSClientTests/Python-Notes-iOSClientTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		22739DFB179610E70093CE62 /* Build configuration list for PBXProject "Python-Notes-iOSClient" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				22739E36179610E70093CE62 /* Debug */,
+				22739E37179610E70093CE62 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		22739E38179610E70093CE62 /* Build configuration list for PBXNativeTarget "Python-Notes-iOSClient" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				22739E39179610E70093CE62 /* Debug */,
+				22739E3A179610E70093CE62 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		22739E3B179610E70093CE62 /* Build configuration list for PBXNativeTarget "Python-Notes-iOSClientTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				22739E3C179610E70093CE62 /* Debug */,
+				22739E3D179610E70093CE62 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 22739DF8179610E70093CE62 /* Project object */;
+}
