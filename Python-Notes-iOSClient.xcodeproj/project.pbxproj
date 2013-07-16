@@ -23,6 +23,7 @@
 		22739E2A179610E70093CE62 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 22739E05179610E70093CE62 /* Foundation.framework */; };
 		22739E32179610E70093CE62 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 22739E30179610E70093CE62 /* InfoPlist.strings */; };
 		22739E35179610E70093CE62 /* Python_Notes_iOSClientTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 22739E34179610E70093CE62 /* Python_Notes_iOSClientTests.m */; };
+		22739E40179611F30093CE62 /* PiOSCRestController.m in Sources */ = {isa = PBXBuildFile; fileRef = 22739E3F179611F30093CE62 /* PiOSCRestController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +59,8 @@
 		22739E31179610E70093CE62 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		22739E33179610E70093CE62 /* Python_Notes_iOSClientTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Python_Notes_iOSClientTests.h; sourceTree = "<group>"; };
 		22739E34179610E70093CE62 /* Python_Notes_iOSClientTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Python_Notes_iOSClientTests.m; sourceTree = "<group>"; };
+		22739E3E179611F30093CE62 /* PiOSCRestController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PiOSCRestController.h; sourceTree = "<group>"; };
+		22739E3F179611F30093CE62 /* PiOSCRestController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PiOSCRestController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -123,6 +126,8 @@
 				22739E1E179610E70093CE62 /* PiOSCViewController.h */,
 				22739E1F179610E70093CE62 /* PiOSCViewController.m */,
 				22739E0A179610E70093CE62 /* Supporting Files */,
+				22739E3E179611F30093CE62 /* PiOSCRestController.h */,
+				22739E3F179611F30093CE62 /* PiOSCRestController.m */,
 			);
 			path = "Python-Notes-iOSClient";
 			sourceTree = "<group>";
@@ -274,6 +279,7 @@
 				22739E10179610E70093CE62 /* main.m in Sources */,
 				22739E14179610E70093CE62 /* PiOSCAppDelegate.m in Sources */,
 				22739E20179610E70093CE62 /* PiOSCViewController.m in Sources */,
+				22739E40179611F30093CE62 /* PiOSCRestController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

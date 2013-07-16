@@ -7,17 +7,30 @@
 //
 
 #import "PiOSCViewController.h"
+#import "PiOSCRestController.h"
 
 @interface PiOSCViewController ()
 
 @end
 
-@implementation PiOSCViewController
+@implementation PiOSCViewController {
+    //Connector
+    PiOSCRestController *connector;
+}
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
+    
+    
+    //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ REST Impl ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    
+    //Instantiate REST connector
+    connector = [[PiOSCRestController alloc] init];
+    
+    // Fetch EPG Data
+    NSData* responseData = [connector getNotes];
 }
 
 - (void)didReceiveMemoryWarning
