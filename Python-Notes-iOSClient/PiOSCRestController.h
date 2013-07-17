@@ -25,6 +25,6 @@
 }
 
 //Methods
-- (NSData*)getNotes;
+- (NSArray*)getNotes;
 
 @end

@@ -1,19 +1,33 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="12E55" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="2">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="12E55" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="L60-cJ-Iif">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="2083"/>
     </dependencies>
     <scenes>
-        <!--PiOSC View Controller-->
+        <!--PiOSC View Controller - My Notes-->
         <scene sceneID="5">
             <objects>
                 <viewController id="2" customClass="PiOSCViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="3">
-                        <rect key="frame" x="0.0" y="20" width="320" height="548"/>
+                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="au5-QA-FkM">
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="NoteCell" id="Ofd-0v-Ets">
+                                        <rect key="frame" x="0.0" y="22" width="320" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="300" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </view>
+                                        <connections>
+                                            <segue destination="ZEo-1u-PHo" kind="push" identifier="showNoteDetail" id="YXe-al-mQo"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
                                 <connections>
                                     <outlet property="dataSource" destination="2" id="NkW-r5-qmm"/>
                                     <outlet property="delegate" destination="2" id="nT8-lV-MSt"/>
@@ -28,11 +42,140 @@
                             <constraint firstItem="au5-QA-FkM" firstAttribute="top" secondItem="3" secondAttribute="top" type="default" id="dCI-yB-XsA"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="My Notes" id="jGz-Uh-8nt"/>
+                    <connections>
+                        <outlet property="tableView" destination="au5-QA-FkM" id="wcC-6I-1ul"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="696" y="127"/>
+        </scene>
+        <!--PiOSC Detail View Controller-->
+        <scene sceneID="py5-1W-COf">
+            <objects>
+                <viewController id="ZEo-1u-PHo" customClass="PiOSCDetailViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="t6x-qS-jpS">
+                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3PK-iK-9wV">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Created by " lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kZb-ws-4CC">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="64" id="ZVq-SO-ZrY"/>
+                                    <constraint firstAttribute="height" constant="21" id="dtd-2X-yoE"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="AuthorName" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AMG-5m-v12">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="88" id="iWh-Rh-8tT"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Date" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Tp-xH-xWd">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="88" id="KYA-P7-WTW"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="on" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MiD-ww-8II">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="v36-cK-QRP"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Content" lineBreakMode="wordWrap" numberOfLines="20" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="280" translatesAutoresizingMaskIntoConstraints="NO" id="ZGo-GY-EJP">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="27" id="QMj-83-WER"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="3PK-iK-9wV" firstAttribute="leading" secondItem="t6x-qS-jpS" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="3yF-ZD-meH"/>
+                            <constraint firstItem="ZGo-GY-EJP" firstAttribute="leading" secondItem="t6x-qS-jpS" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="62Y-R8-HaI"/>
+                            <constraint firstItem="3PK-iK-9wV" firstAttribute="top" secondItem="t6x-qS-jpS" secondAttribute="top" constant="13" id="92y-YT-Uil"/>
+                            <constraint firstItem="AMG-5m-v12" firstAttribute="top" secondItem="kZb-ws-4CC" secondAttribute="top" type="default" id="9d8-cN-epq"/>
+                            <constraint firstItem="MiD-ww-8II" firstAttribute="top" secondItem="t6x-qS-jpS" secondAttribute="top" constant="52" id="9wm-O7-f8f"/>
+                            <constraint firstItem="1Tp-xH-xWd" firstAttribute="top" secondItem="MiD-ww-8II" secondAttribute="top" type="default" id="Czs-8X-Drx"/>
+                            <constraint firstItem="kZb-ws-4CC" firstAttribute="top" secondItem="t6x-qS-jpS" secondAttribute="top" constant="35" id="VEG-28-gpz"/>
+                            <constraint firstItem="1Tp-xH-xWd" firstAttribute="leading" secondItem="t6x-qS-jpS" secondAttribute="leading" constant="37" id="Vqq-In-Lxb"/>
+                            <constraint firstItem="kZb-ws-4CC" firstAttribute="leading" secondItem="t6x-qS-jpS" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="X5E-q3-AUS"/>
+                            <constraint firstAttribute="trailing" secondItem="ZGo-GY-EJP" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="YFb-g3-w7V"/>
+                            <constraint firstItem="MiD-ww-8II" firstAttribute="leading" secondItem="t6x-qS-jpS" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="a0r-R9-pX9"/>
+                            <constraint firstItem="AMG-5m-v12" firstAttribute="leading" secondItem="t6x-qS-jpS" secondAttribute="leading" constant="81" id="alD-nQ-oJK"/>
+                            <constraint firstItem="1Tp-xH-xWd" firstAttribute="baseline" secondItem="MiD-ww-8II" secondAttribute="baseline" type="default" id="ekO-sA-VCP"/>
+                            <constraint firstItem="ZGo-GY-EJP" firstAttribute="top" secondItem="t6x-qS-jpS" secondAttribute="top" constant="88" id="hEo-iB-VCI"/>
+                            <constraint firstItem="AMG-5m-v12" firstAttribute="baseline" secondItem="kZb-ws-4CC" secondAttribute="baseline" type="default" id="mMQ-Ce-9jR"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="C6b-AM-WaA"/>
+                    <connections>
+                        <outlet property="noteAuthorLabel" destination="AMG-5m-v12" id="10Q-l0-cfC"/>
+                        <outlet property="noteContentLabel" destination="ZGo-GY-EJP" id="tha-9v-Gbk"/>
+                        <outlet property="noteDateLabel" destination="1Tp-xH-xWd" id="JHI-gp-Glc"/>
+                        <outlet property="noteTitleLabel" destination="3PK-iK-9wV" id="ZXF-Ap-h7L"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PsY-iA-wDl" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1084" y="127"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="kIR-Al-8cb">
+            <objects>
+                <navigationController id="L60-cJ-Iif" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="kkk-mq-qTP">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="2" kind="relationship" relationship="rootViewController" id="pxJ-Mo-KYn"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XCp-Ga-yr3" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="255" y="127"/>
         </scene>
     </scenes>
+    <classes>
+        <class className="NSLayoutConstraint" superclassName="NSObject">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
+        </class>
+        <class className="PiOSCDetailViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/PiOSCDetailViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="noteAuthorLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="noteContentLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="noteDateLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="noteTitleLabel" candidateClass="UILabel"/>
+            </relationships>
+        </class>
+        <class className="PiOSCViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/PiOSCViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="tableView" candidateClass="UITableView"/>
+            </relationships>
+        </class>
+    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>

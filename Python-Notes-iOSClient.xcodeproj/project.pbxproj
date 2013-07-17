@@ -7,8 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		2213F1D31796315700A6200C /* Note.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2213F1D11796315700A6200C /* Note.xcdatamodeld */; };
-		2213F1D6179632C500A6200C /* Note.m in Sources */ = {isa = PBXBuildFile; fileRef = 2213F1D5179632C500A6200C /* Note.m */; };
 		22739E04179610E70093CE62 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 22739E03179610E70093CE62 /* UIKit.framework */; };
 		22739E06179610E70093CE62 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 22739E05179610E70093CE62 /* Foundation.framework */; };
 		22739E08179610E70093CE62 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 22739E07179610E70093CE62 /* CoreGraphics.framework */; };
@@ -26,6 +24,10 @@
 		22739E32179610E70093CE62 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 22739E30179610E70093CE62 /* InfoPlist.strings */; };
 		22739E35179610E70093CE62 /* Python_Notes_iOSClientTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 22739E34179610E70093CE62 /* Python_Notes_iOSClientTests.m */; };
 		22739E40179611F30093CE62 /* PiOSCRestController.m in Sources */ = {isa = PBXBuildFile; fileRef = 22739E3F179611F30093CE62 /* PiOSCRestController.m */; };
+		3794E0671796CC8800F295C2 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3794E0661796CC8800F295C2 /* CoreData.framework */; };
+		3794E0681796CC9000F295C2 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3794E0661796CC8800F295C2 /* CoreData.framework */; };
+		3794E06B1796D7BF00F295C2 /* Note.m in Sources */ = {isa = PBXBuildFile; fileRef = 3794E06A1796D7BF00F295C2 /* Note.m */; };
+		3794E0731796EBAA00F295C2 /* PiOSCDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3794E0721796EBAA00F295C2 /* PiOSCDetailViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,9 +41,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		2213F1D21796315700A6200C /* Note.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Note.xcdatamodel; sourceTree = "<group>"; };
-		2213F1D4179632C500A6200C /* Note.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Note.h; sourceTree = "<group>"; };
-		2213F1D5179632C500A6200C /* Note.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Note.m; sourceTree = "<group>"; };
 		22739E00179610E70093CE62 /* Python-Notes-iOSClient.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Python-Notes-iOSClient.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		22739E03179610E70093CE62 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		22739E05179610E70093CE62 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -66,6 +65,11 @@
 		22739E34179610E70093CE62 /* Python_Notes_iOSClientTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Python_Notes_iOSClientTests.m; sourceTree = "<group>"; };
 		22739E3E179611F30093CE62 /* PiOSCRestController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PiOSCRestController.h; sourceTree = "<group>"; };
 		22739E3F179611F30093CE62 /* PiOSCRestController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PiOSCRestController.m; sourceTree = "<group>"; };
+		3794E0661796CC8800F295C2 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		3794E0691796D7BF00F295C2 /* Note.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Note.h; sourceTree = "<group>"; };
+		3794E06A1796D7BF00F295C2 /* Note.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Note.m; sourceTree = "<group>"; };
+		3794E0711796EBAA00F295C2 /* PiOSCDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PiOSCDetailViewController.h; sourceTree = "<group>"; };
+		3794E0721796EBAA00F295C2 /* PiOSCDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PiOSCDetailViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +77,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3794E0671796CC8800F295C2 /* CoreData.framework in Frameworks */,
 				22739E04179610E70093CE62 /* UIKit.framework in Frameworks */,
 				22739E06179610E70093CE62 /* Foundation.framework in Frameworks */,
 				22739E08179610E70093CE62 /* CoreGraphics.framework in Frameworks */,
@@ -83,6 +88,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3794E0681796CC9000F295C2 /* CoreData.framework in Frameworks */,
 				22739E28179610E70093CE62 /* SenTestingKit.framework in Frameworks */,
 				22739E29179610E70093CE62 /* UIKit.framework in Frameworks */,
 				22739E2A179610E70093CE62 /* Foundation.framework in Frameworks */,
@@ -95,6 +101,7 @@
 		22739DF7179610E70093CE62 = {
 			isa = PBXGroup;
 			children = (
+				3794E0661796CC8800F295C2 /* CoreData.framework */,
 				22739E09179610E70093CE62 /* Python-Notes-iOSClient */,
 				22739E2D179610E70093CE62 /* Python-Notes-iOSClientTests */,
 				22739E02179610E70093CE62 /* Frameworks */,
@@ -125,14 +132,13 @@
 		22739E09179610E70093CE62 /* Python-Notes-iOSClient */ = {
 			isa = PBXGroup;
 			children = (
+				3794E06E1796EA3000F295C2 /* Views */,
+				3794E06D1796EA1000F295C2 /* Data Controllers */,
+				3794E06C1796E9F900F295C2 /* Data Model */,
+				22739E0A179610E70093CE62 /* Supporting Files */,
 				22739E12179610E70093CE62 /* PiOSCAppDelegate.h */,
 				22739E13179610E70093CE62 /* PiOSCAppDelegate.m */,
 				22739E1B179610E70093CE62 /* MainStoryboard.storyboard */,
-				22739E1E179610E70093CE62 /* PiOSCViewController.h */,
-				22739E1F179610E70093CE62 /* PiOSCViewController.m */,
-				22739E0A179610E70093CE62 /* Supporting Files */,
-				22739E3E179611F30093CE62 /* PiOSCRestController.h */,
-				22739E3F179611F30093CE62 /* PiOSCRestController.m */,
 			);
 			path = "Python-Notes-iOSClient";
 			sourceTree = "<group>";
@@ -147,9 +153,6 @@
 				22739E15179610E70093CE62 /* Default.png */,
 				22739E17179610E70093CE62 /* Default@2x.png */,
 				22739E19179610E70093CE62 /* Default-568h@2x.png */,
-				2213F1D11796315700A6200C /* Note.xcdatamodeld */,
-				2213F1D4179632C500A6200C /* Note.h */,
-				2213F1D5179632C500A6200C /* Note.m */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -171,6 +174,35 @@
 				22739E30179610E70093CE62 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		3794E06C1796E9F900F295C2 /* Data Model */ = {
+			isa = PBXGroup;
+			children = (
+				3794E06A1796D7BF00F295C2 /* Note.m */,
+				3794E0691796D7BF00F295C2 /* Note.h */,
+			);
+			name = "Data Model";
+			sourceTree = "<group>";
+		};
+		3794E06D1796EA1000F295C2 /* Data Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				22739E3E179611F30093CE62 /* PiOSCRestController.h */,
+				22739E3F179611F30093CE62 /* PiOSCRestController.m */,
+			);
+			name = "Data Controllers";
+			sourceTree = "<group>";
+		};
+		3794E06E1796EA3000F295C2 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				22739E1E179610E70093CE62 /* PiOSCViewController.h */,
+				22739E1F179610E70093CE62 /* PiOSCViewController.m */,
+				3794E0711796EBAA00F295C2 /* PiOSCDetailViewController.h */,
+				3794E0721796EBAA00F295C2 /* PiOSCDetailViewController.m */,
+			);
+			name = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -288,8 +320,8 @@
 				22739E14179610E70093CE62 /* PiOSCAppDelegate.m in Sources */,
 				22739E20179610E70093CE62 /* PiOSCViewController.m in Sources */,
 				22739E40179611F30093CE62 /* PiOSCRestController.m in Sources */,
-				2213F1D31796315700A6200C /* Note.xcdatamodeld in Sources */,
-				2213F1D6179632C500A6200C /* Note.m in Sources */,
+				3794E06B1796D7BF00F295C2 /* Note.m in Sources */,
+				3794E0731796EBAA00F295C2 /* PiOSCDetailViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -482,19 +514,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCVersionGroup section */
-		2213F1D11796315700A6200C /* Note.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				2213F1D21796315700A6200C /* Note.xcdatamodel */,
-			);
-			currentVersion = 2213F1D21796315700A6200C /* Note.xcdatamodel */;
-			path = Note.xcdatamodeld;
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
-		};
-/* End XCVersionGroup section */
 	};
 	rootObject = 22739DF8179610E70093CE62 /* Project object */;
 }

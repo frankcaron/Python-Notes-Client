@@ -7,6 +7,7 @@
 //
 
 #import "PiOSCViewController.h"
+#import "PiOSCDetailViewController.h"
 #import "PiOSCRestController.h"
 
 @interface PiOSCViewController ()
@@ -20,22 +21,28 @@
     
     //Table Data
     NSArray *tableData;
+    NSArray* notes;
+    
 }
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
-    
-    
-    //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ REST Impl ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
     
     //Instantiate REST connector
     connector = [[PiOSCRestController alloc] init];
     
-    // Fetch EPG Data
-    NSData* responseData = [connector getNotes];
-    tableData = [NSKeyedUnarchiver unarchiveObjectWithData:responseData];
+    // Fetch Notes List
+    notes = [connector getNotes];
+    
+    //Create list of titles
+    NSMutableArray* notesTitleList = [[NSMutableArray alloc] init];
+    for (Note* note in notes) {
+        [notesTitleList addObject:[note note_title]];
+    }
+    
+    //Populate Table
+    tableData = notesTitleList;
 }
 
 - (void)didReceiveMemoryWarning
@@ -51,11 +58,11 @@
     return [tableData count];
 }
 
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+- (UITableViewCell *)tableView:(UITableView *)tableViewTemp cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    static NSString *simpleTableIdentifier = @"SimpleTableItem";
+    static NSString *simpleTableIdentifier = @"NoteCell";
     
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:simpleTableIdentifier];
+    UITableViewCell *cell = [tableViewTemp dequeueReusableCellWithIdentifier:simpleTableIdentifier];
     
     if (cell == nil) {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:simpleTableIdentifier];
@@ -64,5 +71,19 @@
     cell.textLabel.text = [tableData objectAtIndex:indexPath.row];
     return cell;
 }
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    //Handle the passing of Note data to the detail view
+    if ([segue.identifier isEqualToString:@"showNoteDetail"]) {
+        NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
+        PiOSCDetailViewController *destViewController = segue.destinationViewController;
+        destViewController.noteTitle = [[notes objectAtIndex:indexPath.row] note_title];
+        destViewController.noteContent = [[notes objectAtIndex:indexPath.row] note_content];
+        destViewController.noteAuthor = [[notes objectAtIndex:indexPath.row] note_creator];
+        destViewController.noteDate = [[notes objectAtIndex:indexPath.row] note_date_updated];
+    }
+}
+
+@synthesize tableView;
 
 @end

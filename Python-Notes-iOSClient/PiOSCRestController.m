@@ -7,29 +7,21 @@
 //
 
 #import "PiOSCRestController.h"
+#import "Note.h"
 
 @implementation PiOSCRestController
 
 // =====================================================================
 //
-// createAuthRestSession
+// getNotes
 //
-// Method to create an authenticated REST session with the MINT API
-//
-// =====================================================================
-
-
-// =====================================================================
-//
-// getRESTEPGData
-//
-// Method to pull EPG Data for today from the RESTful MINT API
+// Returns an array of Note objects polled from the Pythonotes service
 //
 // =====================================================================
 
-- (NSData*)getNotes {
+- (NSArray*)getNotes {
     
-    // Fetch EPG Data ------------------
+    // Fetch Data ------------------
     // ---------------------------------
     
     //Prepare to establish the connection
@@ -38,9 +30,6 @@
     
     [request setHTTPMethod:@"GET"];
     [request setValue:@"*/*" forHTTPHeaderField:@"Accept"];
-    //[request setValue:@"application/json" forHTTPHeaderField:@"Content-Type"];
-    //[request setValue:@"json" forHTTPHeaderField:@"Data-Type"];
-    //[request setValue:[NSString stringWithFormat:@"%d", [jsonData length]] forHTTPHeaderField:@"Content-Length"];
     
     NSHTTPURLResponse *response = nil;
     NSError *error = nil;
@@ -48,33 +37,33 @@
     //Make the request
     responseData = [NSURLConnection sendSynchronousRequest:request returningResponse:&response error:&error];
     
-    //Check for errors
-    if (error != nil) {
-        //Log errors
-        //NSLog(@"Pull Error: %@", [error localizedDescription]);
-    } else {
-        //Log success
-        //NSLog(@"Pull Success: %@", response);
+    //Parse the data as a series of Note objects
+    NSDictionary* json = [NSJSONSerialization
+                          JSONObjectWithData:responseData //1
+                          options:kNilOptions
+                          error:&error];
+    
+    //Get the notes list
+    json = [json objectForKey:@"notes"];
+    
+    //Create a Note object
+    NSMutableArray* notes = [[NSMutableArray alloc] init];
+    for (id object in json) {
+        //Populate new note object with the details from the parsed JSON
+        Note* note = [[Note alloc] init];
+        [note setNote_content:[object objectForKey:(@"note_content")]];
+        [note setNote_creator:[object objectForKey:(@"note_creator")]];
+        [note setNote_date_updated:[object objectForKey:(@"note_date_updated")]];
+        [note setNote_id:[object objectForKey:(@"note_id")]];
+        [note setNote_title:[object objectForKey:(@"note_title")]];
+        [note setNotepad_id_key:[object objectForKey:(@"notepad_id_key")]];
         
-        //Inform user with alert
-        /* UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Success!"
-                                                        message:@"Your data has been returned."
-                                                       delegate:nil
-                                              cancelButtonTitle:@"Ok"
-                                              otherButtonTitles: nil];
-        [alert show]; */
+        //Add the note to the array
+        [notes addObject:note];
     }
     
-    //Log toString version of the data
-    NSString *responseString2 = [[NSString alloc] initWithData:responseData encoding:NSUTF8StringEncoding];
-    NSLog(@"%@", responseString2);
-    
-    //Parse the data as a series of Note objects
-    
-    
-    
     //Return the response
-    return responseData;
+    return notes;
     
 }
 
