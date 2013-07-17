@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface PiOSCViewController : UIViewController
+@interface PiOSCViewController : UIViewController <UITableViewDelegate, UITableViewDataSource>
 
 @end

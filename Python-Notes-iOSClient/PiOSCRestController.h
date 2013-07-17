@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "Note.h"
 
 @interface PiOSCRestController : NSObject {
 
@@ -20,6 +21,7 @@
 
     //JSON Response
     NSData *responseData;
+    NSArray *responseArray;
 }
 
 //Methods

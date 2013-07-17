@@ -57,17 +57,21 @@
         //NSLog(@"Pull Success: %@", response);
         
         //Inform user with alert
-        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Success!"
+        /* UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Success!"
                                                         message:@"Your data has been returned."
                                                        delegate:nil
                                               cancelButtonTitle:@"Ok"
                                               otherButtonTitles: nil];
-        [alert show];
+        [alert show]; */
     }
     
     //Log toString version of the data
     NSString *responseString2 = [[NSString alloc] initWithData:responseData encoding:NSUTF8StringEncoding];
     NSLog(@"%@", responseString2);
+    
+    //Parse the data as a series of Note objects
+    
+    
     
     //Return the response
     return responseData;

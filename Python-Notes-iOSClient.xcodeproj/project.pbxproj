@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2213F1D31796315700A6200C /* Note.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2213F1D11796315700A6200C /* Note.xcdatamodeld */; };
+		2213F1D6179632C500A6200C /* Note.m in Sources */ = {isa = PBXBuildFile; fileRef = 2213F1D5179632C500A6200C /* Note.m */; };
 		22739E04179610E70093CE62 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 22739E03179610E70093CE62 /* UIKit.framework */; };
 		22739E06179610E70093CE62 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 22739E05179610E70093CE62 /* Foundation.framework */; };
 		22739E08179610E70093CE62 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 22739E07179610E70093CE62 /* CoreGraphics.framework */; };
@@ -37,6 +39,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2213F1D21796315700A6200C /* Note.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Note.xcdatamodel; sourceTree = "<group>"; };
+		2213F1D4179632C500A6200C /* Note.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Note.h; sourceTree = "<group>"; };
+		2213F1D5179632C500A6200C /* Note.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Note.m; sourceTree = "<group>"; };
 		22739E00179610E70093CE62 /* Python-Notes-iOSClient.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Python-Notes-iOSClient.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		22739E03179610E70093CE62 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		22739E05179610E70093CE62 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -142,6 +147,9 @@
 				22739E15179610E70093CE62 /* Default.png */,
 				22739E17179610E70093CE62 /* Default@2x.png */,
 				22739E19179610E70093CE62 /* Default-568h@2x.png */,
+				2213F1D11796315700A6200C /* Note.xcdatamodeld */,
+				2213F1D4179632C500A6200C /* Note.h */,
+				2213F1D5179632C500A6200C /* Note.m */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -280,6 +288,8 @@
 				22739E14179610E70093CE62 /* PiOSCAppDelegate.m in Sources */,
 				22739E20179610E70093CE62 /* PiOSCViewController.m in Sources */,
 				22739E40179611F30093CE62 /* PiOSCRestController.m in Sources */,
+				2213F1D31796315700A6200C /* Note.xcdatamodeld in Sources */,
+				2213F1D6179632C500A6200C /* Note.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -460,6 +470,7 @@
 				22739E3A179610E70093CE62 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		22739E3B179610E70093CE62 /* Build configuration list for PBXNativeTarget "Python-Notes-iOSClientTests" */ = {
 			isa = XCConfigurationList;
@@ -468,8 +479,22 @@
 				22739E3D179610E70093CE62 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		2213F1D11796315700A6200C /* Note.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				2213F1D21796315700A6200C /* Note.xcdatamodel */,
+			);
+			currentVersion = 2213F1D21796315700A6200C /* Note.xcdatamodel */;
+			path = Note.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 22739DF8179610E70093CE62 /* Project object */;
 }

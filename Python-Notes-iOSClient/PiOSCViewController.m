@@ -13,9 +13,13 @@
 
 @end
 
-@implementation PiOSCViewController {
+@implementation PiOSCViewController  {
+    
     //Connector
     PiOSCRestController *connector;
+    
+    //Table Data
+    NSArray *tableData;
 }
 
 - (void)viewDidLoad
@@ -31,12 +35,34 @@
     
     // Fetch EPG Data
     NSData* responseData = [connector getNotes];
+    tableData = [NSKeyedUnarchiver unarchiveObjectWithData:responseData];
 }
 
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+
+//Table Functions
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+    return [tableData count];
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    static NSString *simpleTableIdentifier = @"SimpleTableItem";
+    
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:simpleTableIdentifier];
+    
+    if (cell == nil) {
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:simpleTableIdentifier];
+    }
+    
+    cell.textLabel.text = [tableData objectAtIndex:indexPath.row];
+    return cell;
 }
 
 @end
